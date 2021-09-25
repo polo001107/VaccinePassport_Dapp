@@ -1,0 +1,168 @@
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+            background-image: url("../images/4.png");
+        }
+
+        caption {
+            font-size: larger;
+        }
+
+        a:link {
+            color: red;
+        }
+
+
+        a:visited {
+            color: green;
+        }
+
+
+        a:hover {
+            color: hotpink;
+        }
+
+        table {
+            width: 150px;
+            height: 100px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: darkgrey;
+            color: white;
+        }
+
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+
+        button {
+            background-color: #3498db;
+            border-radius: 5px;
+            width: 200px;
+            height: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15x;
+
+        }
+
+        #1 {
+            width: 300px;
+            height: auto;
+
+        }
+    </style>
+    <style type="text/css">
+        .table1 {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+        }
+    </style>
+
+    <style type="text/css">
+        .table2 {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+        }
+    </style>
+
+    <script>
+
+        function uploadfile() {
+            var fileInput = document.querySelector('input[type=file]'),
+                previewImg = document.querySelector('img');
+            fileInput.addEventListener('change', function () {
+                var file = this.files[0];
+                var reader = new FileReader();
+                reader.addEventListener("load", function () {
+                    previewImg.src = reader.result;
+                }, false);
+                reader.readAsDataURL(file);
+            }, false);
+        }
+    </script>
+
+</head>
+
+<body>
+    <div>
+        <h1>Welcome to individual system!(Individual'Name)</h1>
+    </div>
+
+    <div style="border: 1px solid red;" id="1">
+        <h2>Upload your portrait</h2>
+
+        <input type="file" id="file" accept="image/*" onchange="uploadfile();" />
+
+        <div id="result">
+            <img src="" alt="" id="img">
+        </div>
+    </div>
+    <br><br><br>
+
+
+
+    <div>
+
+        <table class="table2" border="2">
+            <caption><b>Vaccine Information</b></caption>
+            <tr>
+                <th>Vaccine Name
+                    <!--疫苗名称-->
+                </th>
+                <th>Manufacturer
+                    <!--生产厂家-->
+                </th>
+                <th>Type
+                    <!--疫苗类型(几针)-->
+                </th>
+                <th>Number have injected
+                    <!--已接种几针-->
+                </th>
+                <th>Date of vaccination
+                    <!--接种日期-->
+                </th>
+                <th>Expiry Date
+                    <!--预期失效时间，若未完成一轮接种则不显示-->
+                </th>
+                <th>Immunisation Rates
+                    <!--此状态下的免疫率-->
+                </th>
+
+            </tr>
+            <tr>
+                <th>content</th>
+                <th>content</th>
+                <th>content</th>
+                <th>content</th>
+                <th>content</th>
+                <th>content</th>
+                <th>content</th>
+            </tr>
+
+        </table>
+        <a href="individualCheck.html">
+            <b>
+                back
+            </b>
+        </a>
+    </div>
+
+</body>
+
+</html>

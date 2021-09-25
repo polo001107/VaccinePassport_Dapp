@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            text-align: center;
+            background-image: url("../images/4.png");
+        }
+
+
+        h1 {
+            font-size: 50px;
+        }
+
+        label {
+            font-size: 18px;
+        }
+
+        a:link {
+            color: red;
+        }
+
+
+        a:visited {
+            color: green;
+        }
+
+
+        a:hover {
+            color: hotpink;
+        }
+    </style>
+</head>
+
+<script type="text/javascript">
+    function inform() {
+        alert("Submit successfully!");
+    }
+
+    function uploadfile() {
+            var fileInput = document.querySelector('input[type=file]'),
+                previewImg = document.querySelector('img');
+            fileInput.addEventListener('change', function () {
+                var file = this.files[0];
+                var reader = new FileReader();
+                reader.addEventListener("load", function () {
+                    previewImg.src = reader.result;
+                }, false);
+                reader.readAsDataURL(file);
+            }, false);
+        }
+</script>
+
+<body>
+
+    
+        <h1>Register</h1>
+        <h2>Your identity: Individual</h2>\<br><br>
+      
+                      
+
+                <div style="border: 1px solid red;">
+                    <h2>Upload your portrait</h>
+                        <br><br>
+
+                    <input type="file" id="file" style="position: absolute" accept="image/*" onchange="uploadfile();" />
+                    <div id="result">
+                        <img src="" alt="" id="img">
+                    </div>
+                </div>
+                <br><br><br><br>
+
+                <label><b>password</b></label>
+                <input type="password" placeholder="Please enter your password">
+
+
+               
+                      
+       
+        <a href="key.html" target="_blank">
+            <input type="button" value="submit" onclick="inform()">
+        </a>
+        <br><br>
+
+        <a href="index.html">
+            <b>
+                back
+            </b>
+        </a>
+  
+
+</body>
+
+</html>

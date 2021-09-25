@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vaccine Passport</title>
+
+		<!--描述文档的元信息-->
+
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="Secure Identity and Vaccine Passport" />
+		<meta name="keywords" content="Secure Identity, Vaccine Passport" />
+		<meta name="author" content="Mingdu">
+
+        <style type="text/css"> 
+        
+            body{
+                width: 100%;
+                height: 100%;
+                background-size: auto;
+                background-image: url("../images/4.png");
+                overflow: hidden;     
+                text-align:center
+            }
+
+            button{ 
+                border: 2px solid coral;
+                border-radius: 5px;
+                width: 200px;
+                height: 100px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 30px;
+                font-style: italic;
+                font-weight: bold;
+                background-color:coral;                      
+            }
+
+            
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+            .button span:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+            .button:hover span {
+                padding-right: 25px;
+            }
+
+            .button:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+            
+            h1{
+                font-size : 70px;
+            }
+        
+        </style>
+
+    </head>
+
+    <body>
+    <div>
+        <h1><b>Vaccine Passport</b></h1>
+        <h3>
+            Welcome to your vaccine Passport!
+        </h3>
+        <h3>
+            What do you want to do then?
+        </h3>
+
+        <a href="chooseIdentityLogin.html" class="button alt">
+            <button class="button" style="vertical-align:middle">
+                <span>
+                    Sign In
+                </span>
+            </button>
+
+        </a>
+        <br><br><br>
+        
+        <a href="chooseIdentityRegister.html" class="button alt">
+            <button class="button2" style="vertical-align:middle">
+                <span>
+                    Sign Up
+                </span>
+            </button>
+
+        </a>
+    </div>
+
+    </body>
+</html>
